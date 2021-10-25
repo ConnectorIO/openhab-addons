@@ -136,7 +136,7 @@ public abstract class FroniusBaseThingHandler extends BaseThingHandler {
             logger.warn("Update channel {}: Unsupported value type {}", channelId, value.getClass().getSimpleName());
         }
         logger.debug("Update channel {} with state {} ({})", channelId, (state == null) ? "null" : state.toString(),
-                value.getClass().getSimpleName());
+            value.getClass().getSimpleName());
 
         // Update the channel
         if (state != null) {

@@ -14,7 +14,6 @@ package org.openhab.binding.fronius.internal.handler;
 
 import java.util.Map;
 
-import org.apache.commons.lang.StringUtils;
 import org.openhab.binding.fronius.internal.FroniusBaseDeviceConfiguration;
 import org.openhab.binding.fronius.internal.FroniusBindingConstants;
 import org.openhab.binding.fronius.internal.FroniusBridgeConfiguration;
@@ -23,9 +22,6 @@ import org.openhab.binding.fronius.internal.api.MeterRealtimeResponseDTO;
 import org.openhab.core.library.types.QuantityType;
 import org.openhab.core.library.unit.Units;
 import org.openhab.core.thing.Thing;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /**
  * The {@link FroniusMeterHandler} is responsible for updating the data, which are
  * sent to one of the channels.

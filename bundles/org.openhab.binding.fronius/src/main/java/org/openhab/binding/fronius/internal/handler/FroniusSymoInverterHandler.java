@@ -190,7 +190,7 @@ public class FroniusSymoInverterHandler extends FroniusBaseThingHandler {
      */
     private PowerFlowRealtimeResponse getPowerFlowRealtime(String ip) {
         String location = FroniusBindingConstants.POWERFLOW_REALTIME_DATA.replace("%IP%",
-                (ip != null ? ip.trim() : ""));
+            (ip != null ? ip.trim() : ""));
         return collectDataFormUrl(PowerFlowRealtimeResponse.class, location);
     }
 
@@ -203,7 +203,7 @@ public class FroniusSymoInverterHandler extends FroniusBaseThingHandler {
      */
     private InverterRealtimeResponse getRealtimeData(String ip, int deviceId) {
         String location = FroniusBindingConstants.INVERTER_REALTIME_DATA_URL.replace("%IP%",
-                (ip != null ? ip.trim() : ""));
+            (ip != null ? ip.trim() : ""));
         location = location.replace("%DEVICEID%", Integer.toString(deviceId));
         return collectDataFormUrl(InverterRealtimeResponse.class, location);
     }
