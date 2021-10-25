@@ -179,6 +179,7 @@ public abstract class FroniusBaseThingHandler extends BaseThingHandler {
         String errorMsg = null;
 
         try {
+
             logger.debug("URL = {}", url);
             String response = HttpUtil.executeUrl("GET", url, API_TIMEOUT);
 
@@ -211,6 +212,9 @@ public abstract class FroniusBaseThingHandler extends BaseThingHandler {
         if (resultOk) {
             updateStatus(ThingStatus.ONLINE);
         } else {
+            if (errorMsg.contains("Invalid JSON data received")) {
+                return null;
+            }
             updateStatus(ThingStatus.OFFLINE, ThingStatusDetail.OFFLINE.COMMUNICATION_ERROR, errorMsg);
         }
         return resultOk ? result : null;
