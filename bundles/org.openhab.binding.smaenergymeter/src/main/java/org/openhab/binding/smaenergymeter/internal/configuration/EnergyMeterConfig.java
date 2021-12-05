@@ -22,6 +22,7 @@ public class EnergyMeterConfig {
     private String mcastGroup;
     private Integer port;
     private Integer pollingPeriod;
+    private Long serialNumber;
 
     public String getMcastGroup() {
         return mcastGroup;
@@ -45,5 +46,13 @@ public class EnergyMeterConfig {
 
     public void setPollingPeriod(Integer pollingPeriod) {
         this.pollingPeriod = pollingPeriod;
+    }
+
+    public Long getSerialNumber() {
+        return serialNumber;
+    }
+
+    public void setSerialNumber(Long serialNumber) {
+        this.serialNumber = serialNumber;
     }
 }
